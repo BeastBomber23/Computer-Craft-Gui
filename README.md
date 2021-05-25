@@ -36,8 +36,8 @@ gui.settings(fontSize) --Changes the font size. Keep it between 0.5-5 to not hav
 ```
 
 More to come in later api updates such as.
-- [] Check boxes
-- [] Text input
-- [] Sliders
-- [] More settings
-- [] Images for gui and background
+- [ ] Check boxes
+- [ ] Text input
+- [ ] Sliders
+- [ ] More settings
+- [ ] Images for gui and background
