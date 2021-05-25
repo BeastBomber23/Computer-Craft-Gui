@@ -1,4 +1,4 @@
-os.loadAPI("/OS/APIS/gui.lua")
+os.loadAPI("gui.lua")
 
 lastSelectedPage = -1
 currentPage = 0
