@@ -6,7 +6,7 @@ Check example for a script example but heres all the stuff you can do.
 **Import things to have in your script**
 There is 1 thing you need in your script for this to work.
 ```
-gui.screenCheck() --Checks if any buttons were clicked.
+gui.screenCheck() --Checks if any buttons were clicked. I can not stress enough that this is the most import function. Keep it in a loop.
 ```
 
 **Labels**
