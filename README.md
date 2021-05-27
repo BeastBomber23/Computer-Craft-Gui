@@ -25,6 +25,11 @@ gui.addSpacer() --Adds a empty spot between the item befor it and after it.
 gui.addButton("Text", CallbackFunction) --Adds a button to the screen that you can click with right mouse button. When clicked it calls the callbackfunction you gave it.
 ```
 
+**Toggles**
+```
+gui.addToggle("Text", CallbackFunction) --Make sure that the callback function has 1 parameter. It will call that function with the parameter of either true or false.
+```
+
 **Screen Reseting**
 ```
 gui.screenReset() --Resets the screen
@@ -36,7 +41,7 @@ gui.settings(fontSize) --Changes the font size. Keep it between 0.5-5 to not hav
 ```
 
 More to come in later api updates such as.
-- [ ] Check boxes
+- [X] Check boxes / Toggles
 - [ ] Text input
 - [ ] Sliders
 - [ ] More settings
