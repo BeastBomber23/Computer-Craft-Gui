@@ -3,6 +3,7 @@ mon.setBackgroundColor(colors.black)
 mon.clear()
 
 guiID = 1
+inKeyboardMode = false
 
 --Settings
 scaleTextWithTextSize = false
@@ -119,7 +120,7 @@ local button = {
         mon.setTextColor(colors.white)
         mon.setCursorPos((w-string.len(text))/2+1, guiID)
         mon.write(text)
-        
+
         guiID = guiID + 1
 
         table.insert(buttonsCallback, callback)
@@ -130,10 +131,11 @@ local button = {
         table.insert(buttonData, false)
         
     end
-
 }
 
 local toggle = {
+
+    textV = "",
 
     boxPos = 0,
     id = 0,
@@ -145,22 +147,25 @@ local toggle = {
     end,
     create = function(self, text, callback)
 
+        text2 = "[ ]" .. text
+
         mon.setBackgroundColor(colors.red)
         w, h = mon.getSize()
-        mon.setCursorPos((w-string.len(text))/2+1, guiID)
-        mon.write("[ ]")
+        mon.setCursorPos((w-string.len(text2))/2+1, guiID)
+        mon.write(" ", string.len(text2))
         mon.setTextColor(colors.white)
-        mon.setCursorPos((w-string.len(text))/2+4, guiID)
-        mon.write(text)
+        mon.setCursorPos((w-string.len(text2))/2+1, guiID)
+        mon.write(text2)
         
-        boxPos = (w-string.len(text))/2+1
+        textV = text2
+        boxPos = (w-string.len(text2))/2+1
         id = guiID
 
         guiID = guiID + 1
 
         table.insert(buttonsCallback, callback)
-        table.insert(buttonsG, string.len(text) + (w-string.len(text))/2+1)
-        table.insert(buttonsL, (w-string.len(text))/2)
+        table.insert(buttonsG, string.len(text2) + (w-string.len(text2))/2+1)
+        table.insert(buttonsL, (w-string.len(text2))/2)
         table.insert(buttonsY, guiID - 1)
         table.insert(buttonType, "Toggle")
         table.insert(buttonData, false)
